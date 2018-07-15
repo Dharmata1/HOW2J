@@ -128,7 +128,7 @@ class Fish extends Animal implements Pet
 	public static void main(String[] args)
 	{
 		new Fish().walk();
-	}//test git push2
+	}//test git push1
 	
 }
 
