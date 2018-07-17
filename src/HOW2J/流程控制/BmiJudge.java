@@ -1,4 +1,4 @@
-package j2se;
+package HOW2J.Á÷³Ì¿ØÖÆ;
 import java.util.Scanner;
 
 public class BmiJudge 
