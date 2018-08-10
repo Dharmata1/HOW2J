@@ -77,7 +77,7 @@ public class Hero {
                 	continue;
                 }
                 
-                pw.println(line1);
+                //pw.println(line1);
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
