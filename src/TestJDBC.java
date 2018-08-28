@@ -3,7 +3,8 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-  
+import java.sql.Statement;  
+
 public class TestJDBC {
     public static void main(String[] args) {
   
@@ -25,6 +26,17 @@ public class TestJDBC {
                             "root", "admin");
   
             System.out.println("连接成功，获取连接对象： " + c);
+            
+            // 注意：使用的是 java.sql.Statement
+            // 不要不小心使用到： com.mysql.jdbc.Statement;
+            Statement s = c.createStatement();
+            
+            System.out.println("获取 Statement对象： " + s);
+            
+            String sql = "insert into hero values(null,"+"'提莫'"+","+313.0f+","+50+")";
+            s.execute(sql);
+  
+            System.out.println("执行插入语句成功");            
   
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
