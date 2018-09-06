@@ -1,3 +1,4 @@
+package JDBC;
 
    
 import java.sql.Connection;
@@ -8,7 +9,8 @@ import java.sql.Statement;
 public class TestJDBC {
     public static void main(String[] args) {
   
-        try {
+        try 
+        {
             Class.forName("com.mysql.jdbc.Driver");
   
             // 建立与数据库的Connection连接
@@ -36,15 +38,53 @@ public class TestJDBC {
             String sql = "insert into hero values(null,"+"'提莫'"+","+313.0f+","+50+")";
             s.execute(sql);
   
-            System.out.println("执行插入语句成功");            
+            System.out.println("执行插入语句成功"); 
+            
+            for (int i = 0 ; i < 100; i++)
+            {
+            	String sql1 = "insert into hero values(null," + "'英雄"+i+"'"  + "," + 313.0f + "," + 50 + ")";
+            	s.execute(sql1);
+            }            
+                          
+            System.out.println("执行100条插入语句成功"); 
+            
   
-        } catch (ClassNotFoundException e) {
+        } 
+        catch (ClassNotFoundException e) 
+        {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        } catch (SQLException e) {
+        } 
+        catch (SQLException e) 
+        {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        /*finally
+        {
+        	if (s != null)
+        	{
+        		try
+        		{
+        			s.close();
+        		}
+        		catch(SQLException e)
+        		{
+        			e.printStackTrace();
+        		}
+        	}
+        	
+        	if (c != null)        	{
+        		try
+        		{
+        			c.close();
+        		}
+        		catch(SQLException e)
+        		{
+        			e.printStackTrace();
+        		}
+        	}
+        }*/
   
     }
 }
