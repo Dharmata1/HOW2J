@@ -1,4 +1,4 @@
-package 数字与字符串;
+package HOW2J.数字与字符串;
 
 public class Cracker 
 {
