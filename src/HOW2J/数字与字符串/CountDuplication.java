@@ -63,7 +63,7 @@ public class CountDuplication
 		
 	}
 	
-    private static String randomString(int length) {
+    public static String randomString(int length) {
         String pool = "";
         for (short i = '0'; i <= '9'; i++) {
             pool += (char) i;

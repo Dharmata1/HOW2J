@@ -21,7 +21,7 @@ public class TestJDBC {
             // 编码方式 UTF-8
             // 账号 root
             // 密码 admin
-  
+             
             Connection c = DriverManager
                     .getConnection(
                             "jdbc:mysql://127.0.0.1:3306/how2java?characterEncoding=UTF-8",
@@ -31,6 +31,8 @@ public class TestJDBC {
             
             // 注意：使用的是 java.sql.Statement
             // 不要不小心使用到： com.mysql.jdbc.Statement;
+            
+            //用于执行SQL语句的对象
             Statement s = c.createStatement();
             
             System.out.println("获取 Statement对象： " + s);
