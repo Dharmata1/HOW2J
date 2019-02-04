@@ -1,6 +1,6 @@
 package HOW2J.IO;
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileReader ;
 import java.io.IOException;
 
 public class TestOutStream 
